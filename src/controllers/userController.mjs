@@ -19,4 +19,14 @@ const createdata = async (req,res)=>{
         return res.status(500).send({status:"failed",message:err.message})
     }
 }
-export {getdata,createdata};
+const deletedata = async (req,res)=>{
+    try{
+        const {id}=req.body;
+        const userdata=await userModel.findByIdAndDelete(id);
+        return res.status(200).send({status:"ok",message:userdata})
+    }
+    catch(err){
+        return res.status(500).send({status:"failed",message:err.message})
+    }
+}
+export {getdata,createdata,deletedata};

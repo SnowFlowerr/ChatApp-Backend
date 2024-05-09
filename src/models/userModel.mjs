@@ -4,5 +4,6 @@ const userSchema=new mongoose.Schema({
     profile:String,
     chat:String,
     time:String,
+    email:String,
 },{timestamps:true});
 export default mongoose.model('user',userSchema);
