@@ -5,5 +5,6 @@ const userSchema=new mongoose.Schema({
     chat:String,
     time:String,
     email:String,
+    video:String,
 },{timestamps:true});
 export default mongoose.model('user',userSchema);
