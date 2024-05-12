@@ -6,5 +6,6 @@ const userSchema=new mongoose.Schema({
     time:String,
     email:String,
     video:String,
+    img:String,
 },{timestamps:true});
 export default mongoose.model('user',userSchema);
